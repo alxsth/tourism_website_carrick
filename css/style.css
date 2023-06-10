@@ -1,0 +1,200 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: rgb(223, 225, 232);
+    color: #303030;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+section, article, nav, aside, header, footer, main {
+    display: block;
+}
+
+@media screen and (max-width: 1023px) {
+    #menuBlock {
+        display: block;
+        position: fixed;
+        top: 1.2em;
+        left: 1.2em;
+        z-index: 1;
+
+        -webkit-user-select: none;
+        user-select: none;
+        margin: 0;
+    }
+
+    #menuBlock #desktopLogo {
+        display: none;
+    }
+
+    #menuBlock a {
+        text-decoration: none;
+        color: #232323;
+        transition: color 0.3s ease;
+    }
+
+    #menuBlock li > a:hover {
+        color: rgb(195, 79, 59);
+    }
+
+    #menuBlock input {
+        display: block;
+        width: 2.5em;
+        height: 2em;
+        position: absolute;
+        top: -0.5em;
+        left: -0.3em;
+        cursor: pointer;
+        opacity: 0; /* invisible */
+        z-index: 2; /* placed over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    #menuBlock span {
+        display: block;
+        width: 2em;
+        height: 0.2em;
+        margin-bottom: 0.3em;
+        position: relative;
+        background: #cdcdcd;
+        border-radius: 0.1em;
+        z-index: 1;
+        transform-origin: 0.45em -0.14em;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), 
+                    opacity 0.55s ease;
+    }
+
+    #menuBlock span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuBlock span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    #menuBlock input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg);
+        translate: 0.1em 0.2em;
+        background: #b4b4b4;
+    }
+
+    #menuBlock input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg);
+        /* translate: 0, 10em; */
+    }
+
+    #menuBlock input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        /* transform: rotate(0deg) scale(0.2,0,2); */
+    }
+
+    #menu {
+        position: absolute;
+        width: 10em;
+        height: 100vh;
+        margin: -100px 0 0  -50px;
+        padding: 50px;
+        padding-top: 125px;
+        background: #ededed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    #menuBlock input:checked ~ ul {
+        transform: none;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    #menuBlock {
+        display: flex;
+        position: relative;
+        width: 100vw;
+        /* padding: 1em 0 1em 0; */
+        margin: 0;
+        background-image: linear-gradient(rgb(19, 41, 90),rgb(32, 66, 142));
+        border-bottom: solid rgb(16, 30, 59) 1px;
+    }
+
+    #menuBlock input, span {
+        display: none;
+    }
+
+    #menuBlock ul {
+        display: flex;
+        /* color: #cdcdcd; */
+        list-style: none;
+    }
+
+    #menuBlock a {
+        text-decoration: none;
+        color: #e8e8e8;
+        transition: color 0.3s ease;
+    }
+
+    #menuBlock li a:hover {
+        color: rgb(235, 227, 81);
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menuBlock ul {
+        display: flex;
+        align-items: center;
+        /* width: 100%; */
+        margin: 0;
+        padding: 0;
+    }
+
+    #menuBlock ul li {
+        min-width: 6em;
+        text-align: center;
+    }
+
+    #menuBlock li, #desktopLogo {
+        padding: 0 2em 0 2em;
+    }
+
+    #menuBlock #desktopLogo p span {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 1.6rem;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    #menuBlock #desktopLogo p #green {
+        color: #009A49;
+    }
+
+    #menuBlock #desktopLogo p #white {
+        color: white;
+    }
+
+    #menuBlock #desktopLogo p #orange {
+        color: #FF7900;
+    }
+
+    /* main {
+        margin-top: 5em;
+    } */
+}
