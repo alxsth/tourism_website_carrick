@@ -37,13 +37,24 @@
         </nav>
     </header>
     <div id="content">
-        <aside>
+        <aside id="sidebar">
             <section>Section 1</section>
             <section>Section 2 </section>
             <section>Section 3</section>
             <section>Section 4</section>
         </aside>
         <main>
+            <div class="gallery-frame">
+                <div id="mobileLogo">
+                    <p><span id="green">Carrick</span><span id="white">-On-</span><span id="orange">Shannon</span></p>
+                </div>
+                <div class="gallery" role="gallery">
+                    <img src="images/image1.jpeg" alt="Image 1">
+                    <img src="images/image2.jpeg" alt="Image 2">
+                    <img src="images/image3.jpeg" alt="Image 3">
+                    <img src="images/image4.jpeg" alt="Image 4">
+                </div>
+            </div>
             <h1>Welcome to Town Name</h1>
             <section id="about">
                 <h2>About Town Name</h2>
@@ -92,5 +103,28 @@
     <footer>
         <p>&copy; 2023 Town Name. All rights reserved.</p>
     </footer>
+    <script>
+        const gallery = document.querySelector('.gallery');
+        const images = gallery.querySelectorAll('img');
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                
+                if (i === index) {
+                    img.classList.add('active');
+                }
+            });
+        }
+
+        function switchImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        setInterval(switchImage, 3000); // Change image every 3 seconds
+    </script>
 </body>
 </html>

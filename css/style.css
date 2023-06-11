@@ -16,6 +16,41 @@ section, article, nav, aside, header, footer, main {
     display: block;
 }
 
+/* Gallery */
+.gallery-frame {
+    /* padding: 8em 5em 5em 5em; */
+    background-color: white;
+}
+.gallery::before {
+    content: "";
+    display: block;
+    padding-top: 75%; /* 4:3 aspect ratio (3/4 * 100%) */
+}
+.gallery {
+    position: relative;
+    width: 100%;
+} 
+
+.gallery img {
+    position: absolute;
+
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+.gallery img.active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
+    
+}
+
 @media screen and (max-width: 1023px) {
     #menuBlock {
         display: block;
@@ -89,12 +124,12 @@ section, article, nav, aside, header, footer, main {
 
     #menuBlock input:checked ~ span:nth-last-child(2) {
         transform: rotate(-45deg);
-        /* translate: 0, 10em; */
+        translate: 0, -1px;
     }
 
     #menuBlock input:checked ~ span:nth-last-child(3) {
         opacity: 0;
-        /* transform: rotate(0deg) scale(0.2,0,2); */
+        transform: rotate(0deg) scale(0.2,0,2);
     }
 
     #menu {
@@ -125,6 +160,38 @@ section, article, nav, aside, header, footer, main {
     #content aside {
         display: none;
     }
+
+    .gallery-frame {
+        padding: 3em 5em 5em 5em;
+        background-color: white;
+    }
+
+    #mobileLogo {
+        padding: 0 2em 0 2em;
+        text-align: center;
+        padding: 1em 0 1em 0;
+        margin-bottom: 1em;
+        background-color: rgb(42, 79, 160);
+    }
+
+    main #mobileLogo p span {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 1.6rem;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    #mobileLogo p #green {
+        color: #009A49;
+    }
+
+    #mobileLogo p #white {
+        color: white;
+    }
+
+    #mobileLogo p #orange {
+        color: #FF7900;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -146,6 +213,7 @@ section, article, nav, aside, header, footer, main {
     #menuBlock ul {
         display: flex;
         align-items: stretch;
+        /* width: 100%; */
         list-style: none;
         padding: 0 0 0 5em;
         margin: 0;
@@ -179,6 +247,7 @@ section, article, nav, aside, header, footer, main {
 
     #menuBlock #desktopLogo {
         padding: 0 2em 0 2em;
+        min-width: 20em;
     }
 
     #menuBlock #desktopLogo p span {
@@ -211,7 +280,7 @@ section, article, nav, aside, header, footer, main {
         /* margin: 1em 1em 1em 1em; */
     }
 
-    #content aside {
+    #content aside#sidebar {
         flex: 1;
         background-color: white;
         margin: 1em 0 1em 1em;
@@ -220,6 +289,11 @@ section, article, nav, aside, header, footer, main {
 
     #content main section {
         margin: 1em 1em 1em 1em;
+        background-color: white;
+    }
+
+    .gallery-frame {
+        padding: 8em 5em 5em 5em;
         background-color: white;
     }
 }
