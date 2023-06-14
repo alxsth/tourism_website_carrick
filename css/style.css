@@ -207,7 +207,8 @@ main #mobileLogo p span {
 .item-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 1em 0 0 1em;
+    max-width: 100%;
+    padding: 1em 1em 1em 1em;
 }
 
 .item-box {
@@ -401,6 +402,15 @@ main #mobileLogo p span {
     .footer-menu a.active {
         background-color: rgb(134, 161, 216);
     }
+
+    .item-container {
+        padding-top: 4em;
+        justify-content: center;
+    }
+
+    .item-container .item-box {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 700px) {
@@ -571,6 +581,15 @@ main #mobileLogo p span {
         align-content: center;
         align-items: stretch;
         width: 50%;
+    }
+
+    .item-container {
+        padding-top: 4em;
+        justify-content: center;
+    }
+
+    .item-container .item-box {
+        width: 40%;
     }
 }
 
@@ -751,5 +770,13 @@ main #mobileLogo p span {
         align-content: center;
         align-items: stretch;
         width: 100%;
+    }
+
+    .item-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 65vw;
+        padding: 1em 1em 1em 1em;
     }
 }
