@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/15214b60ba.js" crossorigin="anonymous"></script>
+    <title>Base</title>
+</head>
+<body>
+    <header>
+        <nav role="navigation">
+            <div id="menuBlock">
+                <div id="desktopLogo">
+                    <a href="#"><p><span id="green">Carrick</span><span id="white">-On-</span><span id="orange">Shannon</span></p></a>
+                </div>
+                <!-- Hidden checkbox that receives click
+                that makes possible to use :checked selector on it -->
+                <input type="checkbox">
+
+                <!-- Hamburger -->
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                
+                <ul id="menu">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="events.html"><li>Events</li></a>
+                    <a href="shop.html"><li>Shop</li></a>
+                    <a class="active" href="contact.html"><li>Contact</li></a>
+                    <a href="about.html"><li>About</li></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="content">
+        <aside id="sidebar">
+            <h2>Latest updates:</h2>
+            <section class="sidebar-item">
+                <img src="images/P1000703.jpeg" alt="">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed obcaecati, perspiciatis distinctio pariatur adipisci deleniti, minima eveniet perferendis nulla, quisquam autem!
+                </p>
+
+            </section>
+            <hr>
+            <section class="sidebar-item">
+                <img src="images/P1000703.jpeg" alt="">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed obcaecati, perspiciatis distinctio pariatur adipisci deleniti, minima eveniet perferendis nulla, quisquam autem!
+                </p>
+            </section>
+            <hr>
+            <section class="sidebar-item">
+                <img src="images/P1000703.jpeg" alt="">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed obcaecati, perspiciatis distinctio pariatur adipisci deleniti, minima eveniet perferendis nulla, quisquam autem!
+                </p>
+            </section>
+            <hr>
+            <section class="sidebar-item">
+                <img src="images/P1000703.jpeg" alt="">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed obcaecati, perspiciatis distinctio pariatur adipisci deleniti, minima eveniet perferendis nulla, quisquam autem!
+                </p>
+            </section>
+        </aside>
+        <main>
+            <h2>Contact Us</h2>
+            
+            <form id="contactForm" onsubmit="return validateForm()" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="emailError" class="error-message"></span>
+                </div>
+            
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+            
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-menu">
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="events.html"><li>Events</li></a>
+                <a href="shop.html"><li>Shop</li></a>
+                <a class="active" href="contact.html"><li>Contact</li></a>
+                <a href="about.html"><li>About</li></a>
+            </ul>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18784.61810156471!2d-8.104828303656358!3d53.9481354447035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485e85aa1e1709db%3A0x5c9d5bba717806d5!2z0JrQsNGA0YDQuNC6LdC-0L0t0KjQtdC90L3QvtC9LCBDby4g0JvQuNGC0YDQuNC8!5e0!3m2!1sru!2sie!4v1686666878839!5m2!1sru!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+    <script src="js/validation.js"></script>
+</body>
+</html>
