@@ -183,17 +183,8 @@ main #mobileLogo p span {
     padding-left: 0.5em;
 }
 
-/* .footer-menu {
-    display: flex;
-    justify-content: center;
-} */
-
 .footer-menu ul {
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center; */
     list-style-type: none;
-    /* align-items: flex-start; */
     padding: 0;
 }
 
@@ -201,7 +192,6 @@ main #mobileLogo p span {
     text-decoration: none;
     color: white;
     font-weight: 500;
-    /* text-align: left; */
     display: block;
     background-color: rgb(81, 130, 222);
     margin: 0.2em;
@@ -550,27 +540,6 @@ main #mobileLogo p span {
         height: 70vh;
     }
 
-    /* .footer-menu ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        list-style-type: none;
-        align-items: flex-start;
-        padding: 0 0 0 1em;
-    }
-    
-    .footer-menu ul a {
-        text-decoration: none;
-        color: white;
-        font-weight: 500;
-        display: block;
-        background-color: rgb(81, 130, 222);
-        margin: 0.2em;
-        padding: 1em 0.2em 1em 0.2em;
-        text-align: center;
-        width: 200%;
-        z-index: 1;
-    } */
     .footer-menu ul {
         display: flex;
         flex-direction: column;
@@ -584,7 +553,6 @@ main #mobileLogo p span {
         text-decoration: none;
         color: white;
         font-weight: 500;
-        /* text-align: left; */
         display: block;
         background-color: rgb(81, 130, 222);
         margin: 0.2em;
@@ -612,7 +580,6 @@ main #mobileLogo p span {
         display: flex;
         position: relative;
         width: 100vw;
-        /* padding: 1em 0 1em 0; */
         margin: 0;
         background-image: linear-gradient(rgb(19, 41, 90),rgb(32, 66, 142));
         border-bottom: solid rgb(16, 30, 59) 1px;
@@ -629,22 +596,15 @@ main #mobileLogo p span {
     #menuBlock ul {
         display: flex;
         align-items: stretch;
-        /* width: 100%; */
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    /* #menuBlock ul a {
-        display: flex;
-        
-    } */
-
     #menuBlock a {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* margin: 0 1em 0 1em; */
         text-decoration: none;
         color: #e8e8e8;
         min-width: 8em;
@@ -655,8 +615,6 @@ main #mobileLogo p span {
     #menuBlock a:hover {
         color: rgb(119, 226, 255);
         background-color: rgb(54, 90, 161);
-        /* border: solid rgb(216, 214, 135) 5px; */
-        /* font-size: 1.5em; */
         margin: 0;
         padding: 0;
     }
@@ -696,8 +654,6 @@ main #mobileLogo p span {
     #content main {
         flex: 4;
         padding: 1em 1em 0 1em;
-        /* background-color: white; */
-        /* margin: 1em 1em 1em 1em; */
     }
 
     #content aside#sidebar {
@@ -727,8 +683,6 @@ main #mobileLogo p span {
     }
 
     #content main section img {
-        /* max-width: 100%;
-        max-height: 100%; */
         float: left;
         width: 60%;
         margin: 0 2em 2em 0;
@@ -762,15 +716,12 @@ main #mobileLogo p span {
         list-style-type: none;
         align-items: flex-start;
         padding: 0 0 0 5em;
-        /* height: 50%; */
-        /* width: 30%; */
     }
     
     .footer-menu ul a {
         text-decoration: none;
         color: white;
         font-weight: 500;
-        /* text-align: left; */
         display: block;
         background-color: rgb(81, 130, 222);
         margin: 0.2em;
